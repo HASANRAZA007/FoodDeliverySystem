@@ -7,14 +7,14 @@ namespace FoodDeliverySystem.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private readonly FoodDeliveryDbContext _dbContext;
-        public UnitOfWork(FoodDeliveryDbContext dbContext,CustomerRepository customerRepository,MenuItemRepository menuItemRepository, OrderRepository orderRepository, DeliveryDriverRepositoy deliveryDriverRepositoy,RestaurantRepository restaurantRepository)
+        public UnitOfWork(FoodDeliveryDbContext _dbContext,CustomerRepository _customerRepository,MenuItemRepository _menuItemRepository, OrderRepository _orderRepository, DeliveryDriverRepositoy _deliveryDriverRepositoy,RestaurantRepository _restaurantRepository)
         { 
-            this.DeliveryDriverRepositoy = deliveryDriverRepositoy;
-            this.CustomerRepository = customerRepository;
-            this.MenuItemRepository = menuItemRepository;
-            this.OrderRepository = orderRepository;
-            this.RestaurantRepository = restaurantRepository;
-            this._dbContext = dbContext;
+            this.DeliveryDriverRepositoy = _deliveryDriverRepositoy;
+            this.CustomerRepository = _customerRepository;
+            this.MenuItemRepository = _menuItemRepository;
+            this.OrderRepository = _orderRepository;
+            this.RestaurantRepository = _restaurantRepository;
+            this._dbContext = _dbContext;
         }
         public CustomerRepository CustomerRepository { get; }
 
